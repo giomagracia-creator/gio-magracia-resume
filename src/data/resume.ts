@@ -6,16 +6,24 @@ export type Role = {
   location?: string;
   image?: string;
   imageAlt?: string;
+  logo?: string;
+  logoAlt?: string;
+  centerUrl?: string;
 };
 
 export const summary =
   "Project Manager and Engineer-in-Training with hands-on ownership of capital and maintenance projects from initiation through close-out, plus experience founding and operating a kids coding education business (Code Ninjas Central Edmonton) and an AI implementation firm (Maintello). Experience leading multidisciplinary teams, managing schedules and budgets (including work on programs over $300M), procurement and contract administration, change control, and stakeholder reporting. Strong delivery record coordinating field and office teams, subcontractors, and client interfaces across industrial and civil construction environments. Seeking remote / hybrid Project Manager roles where structured delivery, cost control, and clear communication matter.";
+
+export const shortIntro =
+  "I deliver capital and maintenance projects end to end — schedule, budget, procurement, and clear stakeholder communication — across industrial and civil environments.";
 
 export const experience: Role[] = [
   {
     title: "Project Manager",
     company: "Kandrea Insulation",
     dates: "2026 – Present",
+    logo: "/logos/kandrea.png",
+    logoAlt: "Kandrea Insulation logo",
     bullets: [
       "Manage insulation and scaffolding capital and maintenance projects from initiation through close-out, leading multidisciplinary teams to deliver scope, schedule, cost, quality, and safety objectives.",
       "Direct project planning, scheduling, estimating, engineering reviews, and project controls while providing field leadership and technical direction.",
@@ -28,9 +36,14 @@ export const experience: Role[] = [
     title: "Cofounder, Owner & Operator",
     company: "Code Ninjas Central Edmonton",
     dates: "Present",
-    location: "Unit 273, Bonnie Doon Shopping Centre, 8330 82 Ave NW, Edmonton, AB",
+    location:
+      "Unit 273, Bonnie Doon Shopping Centre, 8330 82 Ave NW, Edmonton, AB",
     image: "/images/code-ninjas-education.png",
-    imageAlt: "Illustration of kids learning coding at a Code Ninjas education center",
+    imageAlt:
+      "Illustration of kids learning coding at a Code Ninjas education center",
+    logo: "/logos/codeninjas.svg",
+    logoAlt: "Code Ninjas logo",
+    centerUrl: "https://www.codeninjas.com/central-edmonton-ab-ca",
     bullets: [
       "Own and operate Code Ninjas Central Edmonton at Bonnie Doon Shopping Centre: facility operations, staffing, scheduling, parent and stakeholder communication, and day-to-day service delivery.",
       "Lead delivery of kids STEM education (coding, robotics, and AI foundations for ages 5–14) across CREATE, JR, camps, and academies: oversee instructor delivery, curriculum fidelity, student progress, and a safe learning environment.",
@@ -44,7 +57,10 @@ export const experience: Role[] = [
     company: "Maintello",
     dates: "2026 – Present",
     image: "/images/maintello-ai.png",
-    imageAlt: "Illustration of Maintello AI implementation and automation workflows",
+    imageAlt:
+      "Illustration of Maintello AI implementation and automation workflows",
+    logo: "/logos/maintello.svg",
+    logoAlt: "Maintello wordmark",
     bullets: [
       "Founded Maintello, an AI implementation firm that helps organizations adopt AI to solve operational pain rather than chase tools.",
       "Define the offer, delivery process, and lean tool stack for AI automation implementations under operator constraints (~20 hrs/week capacity discipline).",
@@ -56,6 +72,8 @@ export const experience: Role[] = [
     title: "Project Manager",
     company: "Arpi’s North Mechanical",
     dates: "2025 – 2026",
+    logo: "/logos/arpis.png",
+    logoAlt: "Arpi’s North logo",
     bullets: [
       "Managed mechanical-focused maintenance and enhancement capital projects, leading teams to meet deliverables, cost, and schedule targets.",
       "Coordinated planning and execution across stakeholders to keep scope, budget, and timeline aligned through delivery.",
@@ -65,6 +83,8 @@ export const experience: Role[] = [
     title: "Senior Project Coordinator",
     company: "Graham Construction",
     dates: "2022 – 2025",
+    logo: "/logos/graham.png",
+    logoAlt: "Graham Construction logo",
     bullets: [
       "Developed and maintained project schedules and budgets on large civil/industrial programs, including support for budgets over $300 million.",
       "Acted as lead project coordinator on the Terwillegar Drive Stage 2 (TDS2) RVB Expansion: quality control, documentation, field conflict resolution, craft/subcontractor coordination, estimating, budgeting, forecasting, and procurement.",
@@ -79,6 +99,8 @@ export const experience: Role[] = [
     title: "Project Engineer / Corrosion Project Manager (EIT)",
     company: "TC Energy",
     dates: "~2020 – 2022",
+    logo: "/logos/tcenergy.svg",
+    logoAlt: "TC Energy logo",
     bullets: [
       "Delivered remediation and corrosion-related project support as an Engineer-in-Training, providing technical guidance and engineering interface with internal teams and external contractors.",
       "Helped ensure field execution followed designs and specifications; coordinated with environmental, regulatory, and operations stakeholders as required.",
@@ -86,8 +108,77 @@ export const experience: Role[] = [
   },
 ];
 
+/** Companies for the "Previously at" logo row (display order). */
+export const previouslyAt = [
+  { company: "Kandrea Insulation", logo: "/logos/kandrea.png", alt: "Kandrea Insulation" },
+  { company: "Code Ninjas", logo: "/logos/codeninjas.svg", alt: "Code Ninjas" },
+  { company: "Maintello", logo: "/logos/maintello.svg", alt: "Maintello" },
+  { company: "Arpi’s North", logo: "/logos/arpis.png", alt: "Arpi’s North" },
+  { company: "Graham Construction", logo: "/logos/graham.png", alt: "Graham Construction" },
+  { company: "TC Energy", logo: "/logos/tcenergy.svg", alt: "TC Energy" },
+];
+
+export const howIWork = [
+  {
+    title: "Delivery-first",
+    body: "I frame decisions around scope, schedule, cost, and safety — then communicate clearly so teams stay aligned.",
+  },
+  {
+    title: "Controls that scale",
+    body: "Schedules, forecasts, change orders, and close-out packages that hold up on large programs and lean teams alike.",
+  },
+  {
+    title: "Field + office bridge",
+    body: "Comfortable coordinating craft, subcontractors, clients, and internal stakeholders from kickoff through turnover.",
+  },
+  {
+    title: "Builder mindset",
+    body: "Operator experience founding STEM education and AI implementation work — practical, capacity-aware, and outcome-focused.",
+  },
+];
+
 export const skillGroups = [
-  { label: "Project controls", items: ["Scheduling", "Budgeting", "Forecasting", "Change management", "SCO / change orders", "Procurement", "Contract administration", "QA/QC", "Close-out"] },
-  { label: "Tools", items: ["Primavera P6", "InEight", "Procore", "Autodesk Construction Cloud", "Bluebeam / Bluebeam Studio", "Visio", "Microsoft Teams", "Word", "Excel", "PowerPoint", "Outlook"] },
-  { label: "Leadership / business", items: ["Multicultural team leadership", "Stakeholder communication", "Subcontractor oversight", "Field + office coordination", "Center operations", "Kids STEM education delivery", "AI implementation", "Entrepreneurship"] },
+  {
+    label: "Project controls",
+    items: [
+      "Scheduling",
+      "Budgeting",
+      "Forecasting",
+      "Change management",
+      "SCO / change orders",
+      "Procurement",
+      "Contract administration",
+      "QA/QC",
+      "Close-out",
+    ],
+  },
+  {
+    label: "Tools",
+    items: [
+      "Primavera P6",
+      "InEight",
+      "Procore",
+      "Autodesk Construction Cloud",
+      "Bluebeam / Bluebeam Studio",
+      "Visio",
+      "Microsoft Teams",
+      "Word",
+      "Excel",
+      "PowerPoint",
+      "Outlook",
+    ],
+  },
+  {
+    label: "Leadership / business",
+    items: [
+      "Multicultural team leadership",
+      "Stakeholder communication",
+      "Subcontractor oversight",
+      "Field + office coordination",
+      "Center operations",
+      "Kids STEM education delivery",
+      "AI implementation",
+      "Entrepreneurship",
+    ],
+  },
 ];
