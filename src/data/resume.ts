@@ -3,7 +3,13 @@ export type Role = {
   company: string;
   dates: string;
   bullets: string[];
+  location?: string;
+  image?: string;
+  imageAlt?: string;
 };
+
+export const summary =
+  "Project Manager and Engineer-in-Training with hands-on ownership of capital and maintenance projects from initiation through close-out, plus experience founding and operating a kids coding education business (Code Ninjas Central Edmonton) and an AI implementation firm (Maintello). Experience leading multidisciplinary teams, managing schedules and budgets (including work on programs over $300M), procurement and contract administration, change control, and stakeholder reporting. Strong delivery record coordinating field and office teams, subcontractors, and client interfaces across industrial and civil construction environments. Seeking remote / hybrid Project Manager roles where structured delivery, cost control, and clear communication matter.";
 
 export const experience: Role[] = [
   {
@@ -16,6 +22,37 @@ export const experience: Role[] = [
       "Run procurement: bid solicitation and evaluation, contract administration, contractor onboarding, and execution strategies.",
       "Facilitate stakeholder meetings and reporting with internal departments, clients, consultants, contractors, and operations; maintain alignment on objectives, risks, and deliverables.",
       "Oversee invoicing, billing, change management, forecasting, cost control, and budget reviews; prepare estimates, technical documentation, progress reports, and close-out packages to company and regulatory standards.",
+    ],
+  },
+  {
+    title: "Cofounder, Owner & Operator",
+    company: "Code Ninjas Central Edmonton",
+    dates: "Present",
+    location:
+      "Unit 273, Bonnie Doon Shopping Centre, 8330 82 Ave NW, Edmonton, AB",
+    image: "/images/code-ninjas-education.png",
+    imageAlt:
+      "Illustration of kids learning coding at a Code Ninjas education center",
+    bullets: [
+      "Own and operate the Code Ninjas Central Edmonton center: facility operations, staffing, enrollment pipeline, parent communication, and day-to-day service delivery.",
+      "Deliver kids coding education programs: schedule classes, oversee instructor delivery of curriculum, track student progress, and maintain a safe, engaging learning environment.",
+      "Project-manage center growth initiatives including community outreach, local event booths/demos, partnerships, and marketing campaigns from planning through execution.",
+      "Run vendor, cashflow, and vendor/invoice coordination for the center; align team around enrollment and experience goals.",
+      "Lead instructors and staff for consistent program quality and customer experience across classes, camps, and drop-ins.",
+    ],
+  },
+  {
+    title: "Founder",
+    company: "Maintello",
+    dates: "2026 – Present",
+    image: "/images/maintello-ai.png",
+    imageAlt:
+      "Illustration of Maintello AI implementation and automation workflows",
+    bullets: [
+      "Founded Maintello, a SaaS and AI implementation firm that helps organizations adopt AI to solve operational pain rather than chase tools.",
+      "Define the offer, delivery process, and lean tool stack for AI automation implementations under operator constraints (~20 hrs/week capacity discipline).",
+      "Design and operate AI-assisted workflows and multi-agent support systems to research, draft, and deliver client-facing work while keeping human approval on consequential sends and publishes.",
+      "Build the company’s digital presence and positioning (offer + landing) as the foundation before scaling external client acquisition.",
     ],
   },
   {
@@ -84,12 +121,16 @@ export const skillGroups = [
     ],
   },
   {
-    label: "Leadership",
+    label: "Leadership / business",
     items: [
       "Multicultural team leadership",
       "Stakeholder communication",
       "Subcontractor oversight",
       "Field + office coordination",
+      "Center operations",
+      "Kids STEM education delivery",
+      "AI implementation",
+      "Entrepreneurship",
     ],
   },
 ];
