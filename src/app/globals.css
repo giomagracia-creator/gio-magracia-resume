@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b1220;
-  --foreground: #e8eef7;
-  --muted: #94a3b8;
-  --card: #111827;
-  --card-border: #1e293b;
-  --accent: #38bdf8;
-  --accent-soft: rgba(56, 189, 248, 0.12);
-  --accent-2: #818cf8;
+  --background: #fafaf9;
+  --foreground: #1c1917;
+  --muted: #64748b;
+  --card: #ffffff;
+  --card-border: #e7e5e4;
+  --accent: #356b6d;
+  --accent-soft: rgba(53, 107, 109, 0.1);
+  --accent-2: #5f7480;
 }
 
 @theme inline {
@@ -35,14 +35,6 @@ body {
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.35);
-  color: #fff;
-}
-
-.gradient-orb {
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(80px);
-  pointer-events: none;
-  opacity: 0.45;
+  background: rgba(53, 107, 109, 0.2);
+  color: #1c1917;
 }

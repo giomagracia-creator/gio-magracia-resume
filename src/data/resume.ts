@@ -28,17 +28,15 @@ export const experience: Role[] = [
     title: "Cofounder, Owner & Operator",
     company: "Code Ninjas Central Edmonton",
     dates: "Present",
-    location:
-      "Unit 273, Bonnie Doon Shopping Centre, 8330 82 Ave NW, Edmonton, AB",
+    location: "Unit 273, Bonnie Doon Shopping Centre, 8330 82 Ave NW, Edmonton, AB",
     image: "/images/code-ninjas-education.png",
-    imageAlt:
-      "Illustration of kids learning coding at a Code Ninjas education center",
+    imageAlt: "Illustration of kids learning coding at a Code Ninjas education center",
     bullets: [
-      "Own and operate the Code Ninjas Central Edmonton center: facility operations, staffing, enrollment pipeline, parent communication, and day-to-day service delivery.",
-      "Deliver kids coding education programs: schedule classes, oversee instructor delivery of curriculum, track student progress, and maintain a safe, engaging learning environment.",
-      "Project-manage center growth initiatives including community outreach, local event booths/demos, partnerships, and marketing campaigns from planning through execution.",
-      "Run vendor, cashflow, and vendor/invoice coordination for the center; align team around enrollment and experience goals.",
-      "Lead instructors and staff for consistent program quality and customer experience across classes, camps, and drop-ins.",
+      "Own and operate Code Ninjas Central Edmonton at Bonnie Doon Shopping Centre: facility operations, staffing, scheduling, parent and stakeholder communication, and day-to-day service delivery.",
+      "Lead delivery of kids STEM education (coding, robotics, and AI foundations for ages 5–14) across CREATE, JR, camps, and academies: oversee instructor delivery, curriculum fidelity, student progress, and a safe learning environment.",
+      "Project-manage center growth initiatives — community outreach, local events, and partnerships — from planning through execution while protecting program quality and customer experience.",
+      "Run vendor, cashflow, and invoice coordination for the center; set an operational cadence and align staff around delivery and enrollment outcomes.",
+      "Build and lead instructor and staff teams for consistent quality across after-school classes, camps, and related offerings.",
     ],
   },
   {
@@ -46,10 +44,9 @@ export const experience: Role[] = [
     company: "Maintello",
     dates: "2026 – Present",
     image: "/images/maintello-ai.png",
-    imageAlt:
-      "Illustration of Maintello AI implementation and automation workflows",
+    imageAlt: "Illustration of Maintello AI implementation and automation workflows",
     bullets: [
-      "Founded Maintello, a SaaS and AI implementation firm that helps organizations adopt AI to solve operational pain rather than chase tools.",
+      "Founded Maintello, an AI implementation firm that helps organizations adopt AI to solve operational pain rather than chase tools.",
       "Define the offer, delivery process, and lean tool stack for AI automation implementations under operator constraints (~20 hrs/week capacity discipline).",
       "Design and operate AI-assisted workflows and multi-agent support systems to research, draft, and deliver client-facing work while keeping human approval on consequential sends and publishes.",
       "Build the company’s digital presence and positioning (offer + landing) as the foundation before scaling external client acquisition.",
@@ -90,47 +87,7 @@ export const experience: Role[] = [
 ];
 
 export const skillGroups = [
-  {
-    label: "Project controls",
-    items: [
-      "Scheduling",
-      "Budgeting",
-      "Forecasting",
-      "Change management",
-      "SCO / change orders",
-      "Procurement",
-      "Contract administration",
-      "QA/QC",
-      "Close-out",
-    ],
-  },
-  {
-    label: "Tools",
-    items: [
-      "Primavera P6",
-      "InEight",
-      "Procore",
-      "Autodesk Construction Cloud",
-      "Bluebeam / Bluebeam Studio",
-      "Visio",
-      "Microsoft Teams",
-      "Word",
-      "Excel",
-      "PowerPoint",
-      "Outlook",
-    ],
-  },
-  {
-    label: "Leadership / business",
-    items: [
-      "Multicultural team leadership",
-      "Stakeholder communication",
-      "Subcontractor oversight",
-      "Field + office coordination",
-      "Center operations",
-      "Kids STEM education delivery",
-      "AI implementation",
-      "Entrepreneurship",
-    ],
-  },
+  { label: "Project controls", items: ["Scheduling", "Budgeting", "Forecasting", "Change management", "SCO / change orders", "Procurement", "Contract administration", "QA/QC", "Close-out"] },
+  { label: "Tools", items: ["Primavera P6", "InEight", "Procore", "Autodesk Construction Cloud", "Bluebeam / Bluebeam Studio", "Visio", "Microsoft Teams", "Word", "Excel", "PowerPoint", "Outlook"] },
+  { label: "Leadership / business", items: ["Multicultural team leadership", "Stakeholder communication", "Subcontractor oversight", "Field + office coordination", "Center operations", "Kids STEM education delivery", "AI implementation", "Entrepreneurship"] },
 ];
