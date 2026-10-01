@@ -4,12 +4,17 @@ import Image from "next/image";
 import { FadeIn } from "@/components/FadeIn";
 import { Nav } from "@/components/Nav";
 import {
+  certifications,
+  earlierExperience,
+  education,
   experience,
   howIWork,
+  languages,
   previouslyAt,
   shortIntro,
   skillGroups,
   summary,
+  volunteering,
 } from "@/data/resume";
 
 function SectionHeading({
@@ -45,51 +50,42 @@ export default function Home() {
         {/* Hero — Kristina-style hierarchy */}
         <FadeIn>
           <section className="mb-16 sm:mb-20">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700/80">
-              Project Manager · EIT (APEGA) · PMP Eligible · Available for remote / hybrid
-            </p>
-            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-stone-900 sm:text-5xl lg:text-[3.4rem] lg:leading-[1.1]">
-              Gio Franz Magracia
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-stone-600 sm:text-xl">
-              {shortIntro}
-            </p>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-stone-500 sm:text-[0.95rem]">
-              Edmonton, AB · Open to remote / WFH
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="mailto:giomagracia@gmail.com"
-                className="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-navy/15 transition hover:bg-[#152a45]"
-              >
-                Email me
-              </a>
-              <a
-                href="tel:3068077167"
-                className="rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm font-medium text-stone-800 transition hover:border-navy/35 hover:text-navy"
-              >
-                306-807-7167
-              </a>
-              <a
-                href="https://www.linkedin.com/in/giofranzmagracia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm font-medium text-stone-800 transition hover:border-navy/35 hover:text-navy"
-              >
-                LinkedIn
-              </a>
-            </div>
-
-            <div className="img-frame relative mt-12 overflow-hidden rounded-2xl shadow-[0_16px_42px_rgba(30,58,95,0.08)]">
-              <Image
-                src="/images/hero-banner.png"
-                alt="Abstract construction leadership and calm technology illustration"
-                width={1280}
-                height={720}
-                priority
-                className="h-auto w-full object-cover"
-                sizes="(max-width: 1024px) 100vw, 1024px"
-              />
+            <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,360px)] lg:gap-14">
+              <div>
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-700/80">
+                  Project Manager | Engineer-in-Training (APEGA) | PMP Eligible — open to remote / WFH
+                </p>
+                <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-stone-900 sm:text-5xl lg:text-[3.4rem] lg:leading-[1.1]">
+                  Gio Franz Magracia
+                </h1>
+                <p className="mt-5 max-w-2xl text-lg leading-relaxed text-stone-600 sm:text-xl">
+                  {shortIntro}
+                </p>
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-stone-500 sm:text-[0.95rem]">
+                  Edmonton, Alberta, Canada · Open to remote / WFH
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href="https://www.linkedin.com/in/giofranzmagracia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-navy/15 transition hover:bg-[#152a45]"
+                  >
+                    Connect on LinkedIn
+                  </a>
+                </div>
+              </div>
+              <div className="relative mx-auto w-full max-w-[360px] overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-[0_16px_42px_rgba(30,58,95,0.12)]">
+                <Image
+                  src="/images/gio-headshot-portrait.png"
+                  alt="Gio Franz Magracia professional headshot"
+                  width={632}
+                  height={405}
+                  priority
+                  className="h-auto w-full object-cover"
+                  sizes="(max-width: 1024px) 80vw, 360px"
+                />
+              </div>
             </div>
           </section>
         </FadeIn>
@@ -197,6 +193,52 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Earlier career */}
+        <section className="mb-24">
+          <FadeIn>
+            <SectionHeading
+              id="earlier-career"
+              eyebrow="Earlier career & leadership"
+              title="Foundations in engineering, service, and leadership"
+            />
+          </FadeIn>
+          <div className="grid gap-4 md:grid-cols-2">
+            {earlierExperience.map((role, i) => (
+              <FadeIn key={`${role.company}-${role.title}`} delay={i * 0.04}>
+                <article className={`${cardClass} h-full p-5 sm:p-6`}>
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h3 className="text-base font-semibold text-stone-900">
+                        {role.title}
+                      </h3>
+                      <p className="mt-0.5 font-medium text-navy">{role.company}</p>
+                      {role.location ? (
+                        <p className="mt-1 text-xs text-stone-500">{role.location}</p>
+                      ) : null}
+                    </div>
+                    <p className="shrink-0 text-sm font-medium text-stone-500">
+                      {role.dates}
+                    </p>
+                  </div>
+                  {role.bullets.length > 0 ? (
+                    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-stone-600">
+                      {role.bullets.map((b) => (
+                        <li key={b} className="flex gap-3">
+                          <span
+                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600/70"
+                            aria-hidden
+                          />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+
         {/* About / how I work */}
         <section className="mb-24" id="about">
           <FadeIn>
@@ -208,7 +250,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn>
             <p className="mb-10 max-w-3xl text-base leading-relaxed text-stone-600 sm:text-lg">
-              {summary}
+              <span className="whitespace-pre-line">{summary}</span>
             </p>
           </FadeIn>
           <div className="grid gap-5 sm:grid-cols-2">
@@ -291,23 +333,37 @@ export default function Home() {
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
                   Education
                 </h3>
-                <p className="mt-3 text-lg font-semibold text-stone-900">
-                  B.A.Sc., Petroleum Engineering (Co-op Program)
-                </p>
-                <p className="mt-1 text-navy">University of Regina</p>
+                <div className="mt-4 space-y-5">
+                  {education.map((item) => (
+                    <div key={`${item.school}-${item.credential}`}>
+                      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                        <p className="font-semibold text-stone-900">{item.school}</p>
+                        <p className="text-xs font-medium text-stone-500">{item.dates}</p>
+                      </div>
+                      <p className="mt-1 text-sm text-navy">{item.credential}</p>
+                      {item.detail ? (
+                        <p className="mt-1 text-xs text-stone-500">{item.detail}</p>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
               <div className={`${cardClass} h-full p-6`}>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
-                  Certifications & Memberships
+                  Certifications
                 </h3>
-                <ul className="mt-3 space-y-2 text-[0.95rem] leading-relaxed text-stone-600">
-                  <li>
-                    Engineer-in-Training — Association of Professional Engineers
-                    and Geoscientists of Alberta (APEGA)
-                  </li>
-                  <li>PMP Eligible (not yet certified)</li>
+                <ul className="mt-4 space-y-3 text-[0.95rem] leading-relaxed text-stone-600">
+                  {certifications.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600/70"
+                        aria-hidden
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </FadeIn>
@@ -342,27 +398,44 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Recognition */}
+        {/* Leadership, volunteering, and languages */}
         <section className="mb-24">
           <FadeIn>
-            <div className="grid gap-5 sm:grid-cols-3">
-              <div className={`${cardClass} p-5`}>
-                <h3 className="text-sm font-semibold text-navy">
-                  Select recognition
-                </h3>
+            <div className="grid gap-5 md:grid-cols-3">
+              <div className={`${cardClass} p-6`}>
+                <h3 className="text-sm font-semibold text-navy">Volunteering</h3>
+                <ul className="mt-3 space-y-2 text-sm leading-relaxed text-stone-600">
+                  {volunteering.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600/70"
+                        aria-hidden
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={`${cardClass} p-6`}>
+                <h3 className="text-sm font-semibold text-navy">Languages</h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {languages.map((language) => (
+                    <span
+                      key={language}
+                      className="rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-sm text-stone-600"
+                    >
+                      {language}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className={`${cardClass} p-6`}>
+                <h3 className="text-sm font-semibold text-navy">Recognition</h3>
                 <p className="mt-2 text-sm leading-relaxed text-stone-600">
                   “You See It You Own It” campaign — top candidate recognition
                 </p>
-              </div>
-              <div className={`${cardClass} p-5`}>
-                <h3 className="text-sm font-semibold text-navy">Volunteering</h3>
-                <p className="mt-2 text-sm leading-relaxed text-stone-600">
-                  Graham Indigenous Engagement — volunteer attendee, 2021 – 2022
-                </p>
-              </div>
-              <div className={`${cardClass} p-5`}>
-                <h3 className="text-sm font-semibold text-navy">References</h3>
-                <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                <p className="mt-5 text-sm font-semibold text-navy">References</p>
+                <p className="mt-1 text-sm leading-relaxed text-stone-600">
                   Available upon request.
                 </p>
               </div>
@@ -383,27 +456,14 @@ export default function Home() {
               Let’s connect
             </h2>
             <p className="mt-3 max-w-xl text-stone-600">
-              Open to remote / hybrid Project Manager roles. Reach out by email,
-              phone, or LinkedIn.
+              Open to remote / hybrid Project Manager roles. Reach out on LinkedIn.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a
-                href="mailto:giomagracia@gmail.com"
-                className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#152a45]"
-              >
-                giomagracia@gmail.com
-              </a>
-              <a
-                href="tel:3068077167"
-                className="inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-800 transition hover:border-navy/35 hover:text-navy"
-              >
-                306-807-7167
-              </a>
               <a
                 href="https://www.linkedin.com/in/giofranzmagracia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-800 transition hover:border-navy/35 hover:text-navy"
+                className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#152a45]"
               >
                 linkedin.com/in/giofranzmagracia
               </a>
