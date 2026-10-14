@@ -181,12 +181,6 @@ export const education: Education[] = [
     dates: "2012–2014",
     detail: "Activities: Petroleum Engineering Club, ASET",
   },
-  {
-    school: "Coursera",
-    credential: "Google Project Management Certificate",
-    dates: "Jul 2023–Present",
-    detail: "In progress / grade pending",
-  },
 ];
 
 export const certifications = [
@@ -269,4 +263,19 @@ export const skillGroups = [
       "Entrepreneurship",
     ],
   },
+];
+
+export const courseraCompleted = [
+  { course: "Foundations of Project Management", program: "Google Project Management Professional Certificate", completed: "Sep 23, 2026", url: "https://www.coursera.org/account/accomplishments/verify/P1XNMRTXU5A5" },
+  { course: "AI Fundamentals", program: "Google AI Professional Certificate", completed: "Sep 24, 2026", url: "https://www.coursera.org/account/accomplishments/verify/8KPZ79GDU2D9" },
+  { course: "AI for Brainstorming and Planning", program: "Google AI Professional Certificate", completed: "Sep 24, 2026", url: "https://www.coursera.org/account/accomplishments/verify/1XYEJ56STNSZ" },
+  { course: "AI for Research and Insights", program: "Google AI Professional Certificate", completed: "Sep 24, 2026", url: "https://www.coursera.org/account/accomplishments/verify/04T6A9FXRQPV" },
+  { course: "AI for Writing and Communicating", program: "Google AI Professional Certificate", completed: "Sep 30, 2026", url: "https://www.coursera.org/account/accomplishments/verify/QQIPCU2C7N0Z" },
+];
+
+export const courseraInProgress = [
+  { name: "Google Project Management Professional Certificate", issuer: "Google", progress: "1 of 7 courses complete" },
+  { name: "Google AI Professional Certificate", issuer: "Google", progress: "4 of 8 courses complete" },
+  { name: "Google Digital Marketing & E-commerce Professional Certificate", issuer: "Google", progress: "0 of 7 courses complete" },
+  { name: "Successful Negotiation: Essential Strategies and Skills", issuer: "University of Michigan", progress: "18% complete" },
 ];

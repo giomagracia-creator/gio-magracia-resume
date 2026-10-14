@@ -5,6 +5,8 @@ import { FadeIn } from "@/components/FadeIn";
 import { Nav } from "@/components/Nav";
 import {
   certifications,
+  courseraCompleted,
+  courseraInProgress,
   earlierExperience,
   education,
   experience,
@@ -365,6 +367,63 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Coursera */}
+        <section className="mb-24">
+          <FadeIn>
+            <SectionHeading id="coursera" eyebrow="Ongoing learning" title="Coursera" />
+          </FadeIn>
+          <div className="grid gap-5 md:grid-cols-2">
+            <FadeIn delay={0.05}>
+              <div className={`${cardClass} h-full p-6`}>
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
+                  Completed course certificates
+                </h3>
+                <p className="mt-1 text-xs text-stone-500">Issued by Google via Coursera</p>
+                <div className="mt-4 space-y-5">
+                  {courseraCompleted.map((c) => (
+                    <div key={c.url}>
+                      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                        <p className="font-semibold text-stone-900">{c.course}</p>
+                        <p className="text-xs font-medium text-stone-500">Completed {c.completed}</p>
+                      </div>
+                      <p className="mt-1 text-sm text-navy">Part of {c.program}</p>
+                      <a
+                        href={c.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 inline-block text-xs font-semibold text-blue-700 underline-offset-2 hover:underline"
+                      >
+                        View certificate ↗
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <div className={`${cardClass} h-full p-6`}>
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
+                  In progress
+                </h3>
+                <div className="mt-4 space-y-5">
+                  {courseraInProgress.map((p) => (
+                    <div key={p.name}>
+                      <div className="flex items-start justify-between gap-3">
+                        <p className="font-semibold text-stone-900">{p.name}</p>
+                        <span className="shrink-0 rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[0.7rem] font-semibold text-amber-800">
+                          In progress
+                        </span>
+                      </div>
+                      <p className="mt-1 text-sm text-navy">{p.issuer}</p>
+                      <p className="mt-1 text-xs text-stone-500">{p.progress}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </FadeIn>
           </div>
